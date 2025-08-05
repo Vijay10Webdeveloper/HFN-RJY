@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heartfulness East Godavari - Meditation Centers</title>
+    <meta name="description" content="Find Heartfulness meditation centers in Visakhapatnam. Join our community for inner peace and spiritual growth.">
+    
+    <!-- Optimized CSS Loading -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+       :root {
+            --primary-color: #2c3e50;
+             --secondary-color: #e74c3c;
+            --teritiary-color: #e8ac4a;
+            --accent-color: #f39c12;
+            --light-bg: #ecf0f1;
+            --dark-bg: #34495e;
+            --text-color: #2c3e50;
+            --light-text: #7f8c8d;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.2);
+            --border-radius: 12px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+        }
+
+        /* Header Styles */
+         .header {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+       .logo {
+            height: 50px;
+            transition: var(--transition);
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            position: relative;
+        }
+
+     
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--text-color);
+            cursor: pointer;
+        }
+
+        /* Navigation Styles - Fixed for Desktop */
+        nav {
+            position: relative;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+            margin: 0;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transition: var(--transition);
+        }
+
+     
+
+        nav a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        nav a.active {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+ @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background: var(--white);
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                padding-top: 2rem;
+                transition: var(--transition);
+                box-shadow: var(--shadow);
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+       
+
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* Welcome Section */
+        .welcome-section {
+            background: white;
+            margin: 2rem 0;
+            padding: 3rem 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .welcome-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        }
+
+        .welcome-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        /* Centers Grid */
+        .centers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .center-column {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .center-column:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        .center-column h6 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .center-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .center-column li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        .center-column li:hover {
+            background: var(--secondary-color);
+            padding-left: 1rem;
+            border-radius: 6px;
+        }
+
+        .center-column li:last-child {
+            border-bottom: none;
+        }
+
+        /* Center Cards */
+        .center-card {
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(91, 56, 185, 0.1);
+        }
+
+        .center-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--primary-color);
+        }
+
+        .center-card .card-body {
+            padding: 2rem;
+        }
+
+        .center-card .card-title {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        
+
+        .center-card .card-title::before {
+            content: '📍';
+            font-size: 1.3rem;
+        }
+
+        .zonal-coordinator {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+        }
+
+        .zonal-coordinator .card-title {
+            color: black;
+            font-size: 1.5rem;
+        }
+
+        .zonal-coordinator .card-title::before {
+            content: '👨‍💼';
+        }
+
+        .main-center {
+            border: 2px solid var(--accent-color);
+            position: relative;
+        }
+
+        .main-center::before {
+            content: '⭐ MAIN CENTER';
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: var(--accent-color);
+            color: white;
+            padding: 0.3rem 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-bottom-left-radius: var(--border-radius);
+        }
+
+        .contact-info {
+            background: var(--teritiary-color);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+            border-left: 4px solid var(--primary-color);
+        }
+
+        .contact-person {
+            font-weight: 600;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+  
+
+        .contact-person::before {
+            content: '👤';
+        }
+
+        .contact-number {
+            color: var(--text-dark);
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .contact-number::before {
+            content: '📞';
+        }
+
+        .map-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: var(--primary-color);
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: var(--transition);
+            margin-top: 1rem;
+        }
+
+        .map-link:hover {
+            background: var(--primary-dark);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(91, 56, 185, 0.3);
+        }
+
+        .map-link::before {
+            content: '🗺️';
+        }
+
+        /* Search and Filter */
+        .search-section {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin: 2rem 0;
+        }
+
+        .search-input {
+            border: 2px solid #ddd;
+            border-radius: 25px;
+            padding: 0.8rem 1.5rem;
+            font-size: 1.1rem;
+            width: 100%;
+            transition: var(--transition);
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(91, 56, 185, 0.1);
+        }
+
+       /* Footer */
+        .footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+
+        .footer-links a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-2px);
+        }
+
+         .footer a:hover {
+            background: var(--secondary-color);
+        }
+
+
+        /* Loading Animation */
+        .loading {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--primary-color);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Scroll to top button */
+        .scroll-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+            opacity: 0;
+            visibility: hidden;
+            z-index: 1000;
+        }
+
+        .scroll-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-top:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+        }
+
+        /* Responsive Design - Mobile First Approach */
+        @media (max-width: 768px) {
+            #menu-icon {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--primary-color);
+                padding: 1rem;
+                gap: 0.5rem;
+                box-shadow: var(--shadow);
+                border-radius: 0 0 var(--border-radius) var(--border-radius);
+                z-index: 1000;
+            }
+
+            nav ul.show {
+                display: flex;
+            }
+
+            nav ul li {
+                width: 100%;
+            }
+
+            nav ul li a {
+                display: block;
+                text-align: center;
+                padding: 1rem;
+                width: 100%;
+                border-radius: var(--border-radius);
+            }
+
+            .welcome-title {
+                font-size: 1.8rem;
+            }
+
+            .centers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .center-card .card-body {
+                padding: 1.5rem;
+            }
+
+            #footer a {
+                display: block;
+                margin: 1rem 0;
+            }
+        }
+
+        /* Larger screens */
+        @media (min-width: 769px) {
+            nav ul {
+                display: flex !important;
+                position: static !important;
+                background: transparent !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+            }
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Animation keyframes */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Focus states for accessibility */
+        nav a:focus,
+        .map-link:focus,
+        .search-input:focus,
+        .scroll-top:focus {
+            outline: 2px solid #fff;
+            outline-offset: 2px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+     <header class="header">
+        <div class="header-container">
+            <img src="../Images/advancing-in-love-black.png" alt="Heartfulness" class="logo">   
+            <nav>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="../Home/Home.html" class="active">HOME</a></li>
+                    <li><a href="../NewSeeker/Newseekers.html">NEW SEEKERS</a></li>
+                    <li><a href="../Abhyasi/Abhyasi.html">ABHYASIS</a></li>
+                </ul>
+                <button class="menu-toggle" id="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+
+
+    
+    <!-- Welcome Section -->
+    <div class="container">
+        <div class="welcome-section">
+            <h1 class="welcome-title">WELCOME TO EAST GODAVARI<br>HEARTFULNESS CENTERS</h1>
+        </div>
+
+
+          <!-- Centers Overview -->
+    <div class="centers-grid">
+        <div class="center-column">
+            <div class="center-column">
+                <h6>🌊  MAIN CENTER</h6>
+                <UL>
+                    <li>SRIKRISHNAPATNAM</li>
+                </ul>
+            </div>
+            <div class="center-column">
+                <h6>🏘️ TOWN CENTERS</h6>
+                <UL>
+                    <li>PRAKASH NAGAR</li>
+                </ul>
+            </div>
+            <div class="center-column">
+                <h6>📍 HEARTFULNESS CENTERS</h6>
+                <ul>
+                    <li>BOMMURU</li>
+                    <li>MORAMPUDI</li>
+                    <li>VIRINCHI</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+           
+        <!-- Zonal Coordinator -->
+        <div class="center-card zonal-coordinator">
+            <div class="card-body">
+                <h4 class="card-title">ZONAL CO-ORDINATOR</h4>
+                <div class="contact-info">
+                    <div class="contact-person">V R S Naga Sarma</div>
+                    <div class="contact-number">+91-9666792133</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Center -->
+        <div class="center-card main-center">
+            <div class="card-body">
+                <h5 class="card-title">SRIKRISHNAPATNAM MEDITATION CENTER</h5>
+                <p><strong>Address:</strong> 3-218,SriKrishnapatnam,Rajanagaram(M),Rajahmundry-533296</p>
+                <div class="contact-info">
+                    <div class="contact-person">Ram Chandar P (CC/CoP)</div>
+                    <div class="contact-number">+91-8803119999</div>
+                </div>
+                <div class="contact-info">
+                    <div class="contact-person">Venu Babu K (ASHRAM MANAGER)</div>
+                    <div class="contact-number">+91-9490887888</div>
+                </div>
+                <a href="https://maps.app.goo.gl/GWBvvNkushsspgHp7" target="_blank" class="map-link">View on Map</a>
+            </div>
+        </div>
+
+        <!-- All Centers Container -->
+        <div id="centersContainer">
+            <!-- Centers will be loaded here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-links">
+                <a href="../HFNContactUs/HFNContactUs.html">
+                    <i class="fas fa-envelope"></i> Contact Us
+                </a>
+                <a href="../FAQs/FAQs.html">
+                    <i class="fas fa-question-circle"></i> FAQs
+                </a>
+            </div>
+            <div style="margin-top: 1rem; color: rgba(255,255,255,0.8);">
+                <p>&copy; 2025 Heartfulness East Godavari. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Loading Scripts -->
+    <script>
+        // Performance optimizations
+       document.addEventListener('DOMContentLoaded', function() {
+    // Lazy load center details
+    loadCenterDetails();
+    
+    // Initialize search functionality
+    initializeSearch();
+    
+    // Initialize mobile menu
+    initializeMobileMenu();
+    
+    // Initialize scroll to top
+    initializeScrollToTop();
+    
+    // Initialize center navigation - ADD THIS LINE
+    setTimeout(() => {
+        initializeCenterNavigation();
+    }, 1100); // Wait for centers to load
+    
+    // Clean URL
+    cleanURL();
+});
+
+        function initializeCenterNavigation() {
+    const centerListItems = document.querySelectorAll('.center-column li');
+    
+    centerListItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const centerName = this.textContent.trim();
+            // Find matching center card
+            const targetId = centerName.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-') + '-meditation-center';
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center'
+                });
+                // Add highlight effect
+                targetElement.style.border = '3px solid var(--accent-color)';
+                setTimeout(() => {
+                    targetElement.style.border = '';
+                }, 2000);
+            }
+        });
+    });
+}
+
+        // Center data
+        const centers = [
+            {
+                name: "BOMMURU MEDITATION CENTER",
+                address: "4-338/2,teachers colony, Bommuru, Rajahmundry-533107",
+                contact: "SITA LAKSHMI V (CC/CoP)",
+                phone: "+91-8639015358",
+                mapLink: "https://maps.app.goo.gl/S7TqmEG2eBWUTzbo6"
+            },
+            {
+                name: "MORAMPUDI MEDITATION CENTER",
+                address: "7-26,Bapuji Nagar,Hukumpeta post,Rajahmundry-533107",
+                contact: "Adum Saheb N (CC/CoP)",
+                phone: "+91-9849395015",
+                mapLink: "https://maps.app.goo.gl/PFCso3v5XvWHJ2Am6"
+            },
+            {
+                name: "PRAKASH NAGAR MEDITATION CENTER",
+                address: "Address: Door No 75-7-2, Prakasam Nagar, Rajamahendravaram, Andhra Pradesh 533103",
+                contact: "Ganga S (CC/CoP)",
+                phone: "+91-6302435177",
+                mapLink: "https://maps.app.goo.gl/XYAFZvzFpJiMY8DU6"
+            },
+           {
+                name: "VIRINCHI MEDITATION CENTER",
+                address: "Address: 28-11-12,Virinchi Vanaprastha Ashram,Sri Ram Nagar,Rajahmundry-533105",
+                contact: "Ganga S (CC/CoP)",
+                phone: "+91-6302435177",
+                mapLink: "https://maps.app.goo.gl/rHJTfMwvD9Dxmovj8"
+            }
+        ];
+
+        function loadCenterDetails() {
+            const container = document.getElementById('centersContainer');
+            const loading = document.createElement('div');
+            loading.className = 'loading';
+            loading.innerHTML = '<div class="spinner"></div><p>Loading meditation centers...</p>';
+            container.appendChild(loading);
+
+            // Simulate loading delay for better UX
+            setTimeout(() => {
+                loading.remove();
+                centers.forEach(center => {
+                    const centerCard = createCenterCard(center);
+                    container.appendChild(centerCard);
+                });
+            }, 1000);
+        }
+function createCenterCard(center) {
+    const card = document.createElement('div');
+    card.className = 'center-card';
+    // Add ID based on center name
+    card.id = center.name.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-');
+    card.innerHTML = `
+        <div class="card-body">
+            <h6 class="card-title">${center.name}</h6>
+            <p><strong>Address:</strong> ${center.address}</p>
+            <div class="contact-info">
+                <div class="contact-person">${center.contact}</div>
+                <div class="contact-number">${center.phone}</div>
+            </div>
+            <a href="${center.mapLink}" target="_blank" class="map-link">View on Map</a>
+        </div>
+    `;
+    return card;
+}
+
+        function initializeSearch() {
+            const searchInput = document.getElementById('searchInput');
+            if (searchInput) {
+                searchInput.addEventListener('input', function(e) {
+                    const searchTerm = e.target.value.toLowerCase();
+                    const centerCards = document.querySelectorAll('.center-card:not(.zonal-coordinator):not(.main-center)');
+                    
+                    centerCards.forEach(card => {
+                        const text = card.textContent.toLowerCase();
+                        if (text.includes(searchTerm)) {
+                            card.style.display = 'block';
+                            card.style.animation = 'fadeIn 0.3s ease-in';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            }
+        }
+
+        function initializeMobileMenu() {
+            const menuIcon = document.getElementById('menu-icon');
+            const navLinks = document.getElementById('nav-links');
+            
+            if (menuIcon && navLinks) {
+                menuIcon.addEventListener('click', function() {
+                    navLinks.classList.toggle('show');
+                    
+                    if (navLinks.classList.contains('show')) {
+                        menuIcon.classList.remove('fa-bars');
+                        menuIcon.classList.add('fa-times');
+                    } else {
+                        menuIcon.classList.remove('fa-times');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                });
+
+                // Close menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!menuIcon.contains(e.target) && !navLinks.contains(e.target)) {
+                        navLinks.classList.remove('show');
+                        menuIcon.classList.remove('fa-times');
+                        menuIcon.classList.add('fa-bars');
+                    }
+                });
+            }
+        }
+
+        function initializeScrollToTop() {
+            const scrollTopBtn = document.getElementById('scrollTop');
+            
+            if (scrollTopBtn) {
+                window.addEventListener('scroll', function() {
+                    if (window.pageYOffset > 300) {
+                        scrollTopBtn.classList.add('show');
+                    } else {
+                        scrollTopBtn.classList.remove('show');
+                    }
+                });
+                
+                scrollTopBtn.addEventListener('click', function() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        }
+
+        function cleanURL() {
+            if (window.location.pathname.endsWith('.html')) {
+                const cleanUrl = window.location.pathname.replace('.html', '');
+                window.history.replaceState(null, null, cleanUrl);
+            }
+        }
+          // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navMenu = document.getElementById('nav-menu');
+        const menuIcon = menuToggle.querySelector('i');
+
+        menuToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            menuIcon.classList.toggle('fa-bars');
+            menuIcon.classList.toggle('fa-times');
+        });
+
+    </script>
+
+    <!-- Bootstrap JS (loaded at end for better performance) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js" defer></script>
+</body>
+</html>
